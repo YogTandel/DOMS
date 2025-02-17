@@ -22,7 +22,7 @@ const ScheduleMenuForWeek = () => {
   // Fetch menu data from API
   const fetchMenus = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/menu/allmenues", {
+      const response = await fetch("https://doms-backend.vercel.app/api/menu/allmenues", {
         method: "GET",
         credentials: "include",
       });
@@ -80,7 +80,7 @@ const ScheduleMenuForWeek = () => {
   const handleSave = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/menu/menues/${selectedMenu._id}`,
+        `https://doms-backend.vercel.app/api/menu/menues/${selectedMenu._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -106,7 +106,7 @@ const ScheduleMenuForWeek = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/menu/menues/${id}`,
+        `https://doms-backend.vercel.app/api/menu/menues/${id}`,
         {
           method: "DELETE",
         }
@@ -141,7 +141,7 @@ const ScheduleMenuForWeek = () => {
 
   const handleAddMenu = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/menu/menues", {
+      const response = await fetch("https://doms-backend.vercel.app/api/menu/menues", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newMenu),
