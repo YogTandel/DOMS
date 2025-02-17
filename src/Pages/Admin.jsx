@@ -107,7 +107,7 @@ function Admin() {
   // ✅ Fetch Users (Only if session is valid)
   const fetchUsers = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admins/admins", {
+      const response = await fetch("https://doms-backend.vercel.app/api/admins/admins", {
         method: "GET",
         credentials: "include",
       });
@@ -128,7 +128,7 @@ function Admin() {
   // ✅ Initial Session Check & Fetch Users
   useEffect(() => {
     axios
-      .get("http://localhost:5000/session", { withCredentials: true })
+      .get("https://doms-backend.vercel.app/session", { withCredentials: true })
       .then((response) => {
         if (response.data.success) {
           console.log("✅ Session Data:", response.data.session);
@@ -194,7 +194,7 @@ function Admin() {
       // Store password before resetting state
       const tempPassword = newAdmin.password;
 
-      const response = await fetch("http://localhost:5000/api/admins/signup", {
+      const response = await fetch("https://doms-backend.vercel.app/api/admins/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
