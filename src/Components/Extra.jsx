@@ -5,7 +5,7 @@ function Extra() {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admins/signout", {
+      const response = await fetch("https://doms-backend.vercel.app/api/admins/signout", {
         method: "POST",
         credentials: "include",
       });
