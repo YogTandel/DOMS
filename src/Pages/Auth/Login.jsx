@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admins/signin",
+        "https://doms-backend.vercel.app/api/admins/signin",
         loginData,
         { withCredentials: true }
       );
