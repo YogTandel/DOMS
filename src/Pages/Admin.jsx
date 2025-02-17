@@ -86,7 +86,7 @@ function Admin() {
     }
 
     axios
-      .get("http://localhost:5000/api/auth/verifyToken", {
+      .get("https://doms-backend.vercel.app/api/auth/verifyToken", {
         headers: { Authorization: `Bearer ${token}` }, // ✅ If using JWT authentication
         withCredentials: true, // Only needed if cookies are used too
       })
